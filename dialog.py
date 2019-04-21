@@ -12,7 +12,6 @@ class Dialog(QDialog):
         self.vt = Veritabani(os.getcwd()+r"\IEDB.db")
         self.pencere = uic.loadUi(os.getcwd()+r"\sozluk.ui")
 
-                
         self.InitUI()
         self.TabloDoldur()
 
@@ -26,7 +25,7 @@ class Dialog(QDialog):
         self.pencere.txtAd.setText("")
 
     def Secim(self):
-        # print(self.liste[self.pencere.lstSozluk.currentRow()])
+
         ID = str(self.liste[self.pencere.lstSozluk.currentRow()][0])
         sozluk_ID = str(self.liste[self.pencere.lstSozluk.currentRow()][1])
         sozluk_adi = str(self.liste[self.pencere.lstSozluk.currentRow()][2])

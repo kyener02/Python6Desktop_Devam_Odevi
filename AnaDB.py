@@ -82,7 +82,7 @@ class Veritabani:
             officeboy.execute("""
             UPDATE HSP_SOZLUK SET 
             SOZLUK_ID = {},
-            SOZLUK_ADI = {},
+            SOZLUK_ADI = '{}',
             TABLO_ID = {},
             WHERE ID = {}
             """.format(sozluk_ID,sozluk_adi,tablo_ID,ID))
@@ -138,7 +138,7 @@ class Veritabani:
             SOZLUK_ADI,
             TABLO_ID)
             values
-            ({},{},{})
+            ({},'{}',{})
             """.format(sozluk_ID,sozluk_adi,tablo_ID)
             )
             self.db.commit()
